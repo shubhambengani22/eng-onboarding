@@ -1,4 +1,12 @@
 const fibonacciSeriesUptoNTerms = (n) => {
+  if ((typeof n == 'string' && !isNaN(parseInt(n))) || typeof n == 'number') {
+    n = parseInt(n)
+  } else {
+    console.log(typeof n)
+    console.log('Please enter an integer')
+    return
+  }
+
   let n1 = 0,
     n2 = 1,
     nextTerm
@@ -17,4 +25,4 @@ const fibonacciSeriesUptoNTerms = (n) => {
   }
 }
 
-fibonacciSeriesUptoNTerms(50)
+fibonacciSeriesUptoNTerms(null)
